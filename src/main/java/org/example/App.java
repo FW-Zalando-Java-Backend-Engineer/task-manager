@@ -33,20 +33,24 @@ public class App {
 
 
         // Print all tasks using a stream
-       /* descriptions
-               // .stream() : this is optional. not bad, not good to use it here
-                .forEach(
-                      System.out::println
-                   // task -> System.out.println("Task -> " +task.getDescription())
-                );*/
+            //       pendingTasks
+            //               // .stream() : this is optional. not bad, not good to use it here
+            //                .forEach(
+            //                      System.out::println
+            //                    );
 
+       // processor.processTasks(pendingTasks,  System.out::println);
+        processor.processTasks(pendingTasks,  t -> System.out.println("TODO: "+t.getDescription()));
+
+      // Printing descriptions
+        System.out.println(descriptions);
 
         // Converting numbers to strings
-        List<Integer> nums = List.of(1, 2, 3);
-        List<String> asStrings = nums.stream()
-                .map(number -> "Number: "+number)
-                .collect(Collectors.toList());
-
-        System.out.println(asStrings);
+        //        List<Integer> nums = List.of(1, 2, 3);
+        //        List<String> asStrings = nums.stream()
+        //                .map(number -> "Number: "+number)
+        //                .collect(Collectors.toList());
+        //
+        //        System.out.println(asStrings);
     }
 }

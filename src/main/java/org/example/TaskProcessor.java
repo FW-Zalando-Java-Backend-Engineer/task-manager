@@ -1,5 +1,6 @@
 package org.example;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -26,5 +27,9 @@ public class TaskProcessor {
                     .stream()
                     .map(mapper)
                     .collect(Collectors.toList());
+    }
+
+    public void processTasks(List<Task> tasks, Consumer<Task> action){
+            tasks.forEach(action);
     }
 }
