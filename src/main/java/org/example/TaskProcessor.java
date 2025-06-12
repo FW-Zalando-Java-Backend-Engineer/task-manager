@@ -21,14 +21,18 @@ public class TaskProcessor {
                 .collect(Collectors.toList());  // Collect the result into a new List
     }
 
-
+    /**
+     * Transforms tasks using a provided mapping function.
+     */
     public List<String> mapTasks(List<Task> tasks, Function<Task, String> mapper) {
             return tasks
                     .stream()
                     .map(mapper)
                     .collect(Collectors.toList());
     }
-
+    /**
+     * Applies an action to each task (side-effect operation).
+     */
     public void processTasks(List<Task> tasks, Consumer<Task> action){
             tasks.forEach(action);
     }

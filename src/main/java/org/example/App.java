@@ -40,7 +40,7 @@ public class App {
             //                    );
 
        // processor.processTasks(pendingTasks,  System.out::println);
-        processor.processTasks(pendingTasks,  t -> System.out.println("TODO: "+t.getDescription()));
+        processor.processTasks(pendingTasks,  t -> System.out.println("TODO: "+ t.getDescription()));
 
       // Printing descriptions
         System.out.println(descriptions);
